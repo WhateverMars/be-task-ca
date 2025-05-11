@@ -1,4 +1,3 @@
-from typing import List
 from uuid import UUID
 from pydantic import BaseModel
 
@@ -17,12 +16,3 @@ class CreateUserResponse(BaseModel):
     last_name: str
     email: str
     shipping_address: str | None
-
-
-class AddToCartRequest(BaseModel):
-    item_id: UUID
-    quantity: int
-
-
-class AddToCartResponse(BaseModel):
-    items: List[AddToCartRequest]
